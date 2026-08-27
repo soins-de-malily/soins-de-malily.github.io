@@ -825,6 +825,11 @@ html:not(.js) .count[data-to="4.9"]{
 
 /* よくある質問の質問文は中央に。「＋」は右端に固定します */
 .faq summary{justify-content:center;position:relative;padding-right:2.4rem;}
+/* スマホでは、いちばん長い質問でも1行に収まるよう文字を画面幅に合わせて縮めます */
+@media(max-width:759px){
+  .faq summary{font-size:clamp(.7rem,3.4vw,.95rem);letter-spacing:.02em;padding-right:2rem;}
+  .faq summary::after{right:.2rem;}
+}
 .faq summary::after{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);}
 /* メニューの特典の箇条書きは、左ぞろえのまま */
 
