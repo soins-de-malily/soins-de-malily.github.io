@@ -1,0 +1,9 @@
+/* All four corners follow the previously larger, rounder side. */
+#cases .case,#cases .case+.case,#voice .review-card,#voice .review-more{border-radius:27px;}
+#cases .case::before,#voice .review-card::before,#voice .review-more::before{border-radius:22px;}
+#first .plan{border-radius:30px;}
+#first .plan::before{border-radius:25px;}
+a.btn-line,a.ig-link{border-radius:19px;}
+a.btn-line::before,a.ig-link::before{border-radius:14px;}
+.price .off{border-radius:13px;}
+@media(max-width:759px){#cases .case,#cases .case+.case,#voice .review-card,#voice .review-more{border-radius:24px;}#cases .case::before,#voice .review-card::before,#voice .review-more::before{border-radius:19px;}#first .plan{border-radius:26px;}#first .plan::before{border-radius:21px;}}

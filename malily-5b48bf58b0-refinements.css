@@ -1,0 +1,13 @@
+/* A full-width threshold, with a real opening for the central crest. */
+.antique-portal{--crest-width:84px;--crest-height:48px;--arch-apex:12px;top:-54px;width:calc(100% - 4px);max-width:none;}
+.portal-architecture{inset:auto;top:0;left:0;width:calc(50% - var(--crest-width)/2);height:100%;}
+.portal-architecture-right{left:auto;right:0;transform:scaleX(-1);}
+.portal-detail{opacity:.62;}
+.portal-crest{top:calc(var(--arch-apex) - var(--crest-height));width:var(--crest-width);height:var(--crest-height);}
+.portal-crest path{stroke:#c3a36b;stroke-width:.9;stroke-linejoin:round;opacity:.85;}
+.portal-crest .crest-crown{fill:rgba(155,117,56,.1);}
+.portal-crest .crest-lily{stroke-width:.85;}
+.portal-crest .crest-scrollwork{opacity:.65;}
+/* Shift every explanation together; wrapping stays within its existing frame. */
+#cases .case-details{padding-inline-start:1cm;box-sizing:border-box;}
+@media(max-width:759px){.antique-portal{--crest-width:68px;--crest-height:38.857px;--arch-apex:10.615px;top:-66px;}}

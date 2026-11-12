@@ -1,0 +1,10 @@
+/* Move the complete left-aligned information block together, keeping it in the page. */
+#access .info{--access-shift:clamp(2cm,18vw,3cm);margin-left:var(--access-shift);width:calc(100% - var(--access-shift));min-width:0;text-align:left;}
+#access .info dl{grid-template-columns:6.5em minmax(0,1fr);}
+#access .info dd{min-width:0;overflow-wrap:break-word;}
+
+#access .access-phrase{display:inline-block;white-space:nowrap;}
+#access .access-clause{display:inline-block;max-width:100%;}
+
+/* In the two-column layout, use the open gutter so the text keeps its original width. */
+@media(min-width:760px){#access .info{margin-left:0;width:auto;position:relative;left:clamp(24px,calc(18vw - 130px),3cm);}}

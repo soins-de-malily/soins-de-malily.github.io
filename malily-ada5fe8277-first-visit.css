@@ -1,0 +1,11 @@
+/* Brief, readable first-visit guidance on the existing antique background. */
+#suggestion .first-visit-points{list-style:none;max-width:620px;margin:0 auto;padding:0;}
+#suggestion .first-visit-points li{position:relative;padding-left:1.35rem;margin-bottom:1.35rem;text-align:left;font-size:.9rem;line-height:1.95;letter-spacing:.035em;}
+#suggestion .first-visit-points li::before{content:"•";position:absolute;left:0;top:0;color:#c3a36b;}
+#suggestion .first-visit-points li>strong{display:block;font-weight:600;color:#f0e7d9;}
+#suggestion .first-visit-points li>span{display:block;font-size:.84rem;color:#cbc3b6;}
+#suggestion .first-visit-note{max-width:620px;margin:1.9rem auto 0;text-align:left;font-size:.82rem;line-height:2;letter-spacing:.025em;}
+#suggestion .first-visit-note strong{display:block;margin-bottom:.5rem;font-weight:500;color:#d2bb8b;}
+#suggestion .first-visit-note em{font-style:normal;display:inline-block;}
+#suggestion .first-visit-note>span{display:block;color:#c4bcae;}
+@media(max-width:759px){#suggestion .first-visit-points li{font-size:.88rem;margin-bottom:1.1rem;padding-left:1.15rem;}#suggestion .first-visit-points li>span{font-size:.82rem;}#suggestion .first-visit-note{margin-top:1.6rem;font-size:.79rem;}}

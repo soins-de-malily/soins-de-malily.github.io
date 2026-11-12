@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soins-de-malily.github.io/sitemap.xml

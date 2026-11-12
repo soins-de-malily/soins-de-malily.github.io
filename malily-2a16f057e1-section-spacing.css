@@ -1,0 +1,4 @@
+/* Join the initial menus directly to staff after removing the standalone hair photo. */
+#first{padding-bottom:40px;}
+#staff{padding-top:56px;}
+@media(max-width:759px){#first{padding-bottom:32px;}#staff{padding-top:40px;}}

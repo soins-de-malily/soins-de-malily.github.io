@@ -1,0 +1,23 @@
+/* A shared antique backdrop gently emerges through the last part of the film. */
+.hero{background:transparent!important;}
+.hero .hero-bg,.hero::after{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 69%,rgba(0,0,0,.82) 78%,rgba(0,0,0,.28) 92%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 69%,rgba(0,0,0,.82) 78%,rgba(0,0,0,.28) 92%,transparent 100%);}
+/* An open classical arch at the threshold: no panel, no hard horizontal seam. */
+.antique-portal{position:absolute;z-index:2;left:50%;top:-105px;transform:translateX(-50%);width:calc(100% - 24px);max-width:1180px;height:260px;pointer-events:none;scroll-margin-top:180px;}
+.portal-architecture{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 1px 2px rgba(6,5,9,.8));}
+.portal-architecture path{fill:none;stroke:url(#portal-brass);stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;}
+.portal-outline{stroke-width:1.35;}
+.portal-inner-line{stroke-width:.7;opacity:.6;}
+.portal-detail{stroke-width:.7;opacity:.7;}
+.portal-architecture .portal-keystone{fill:rgba(150,111,54,.17);stroke-width:.8;}
+.portal-crown{stroke-width:.8;opacity:.85;}
+.portal-scroll{position:absolute;top:calc(50% - 10px);width:54px;height:44px;overflow:visible;color:#b99c65;opacity:.47;}
+.portal-scroll path{fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;}
+.portal-scroll-left{left:calc(4.2% - 18px);}
+.portal-scroll-right{right:calc(4.2% - 18px);transform:scaleX(-1);}
+@media(max-width:759px){.antique-portal{top:-92px;height:230px;scroll-margin-top:160px;}.portal-scroll{width:40px;height:36px;top:calc(50% - 8px);}.portal-scroll-left{left:calc(4.2% - 14px);}.portal-scroll-right{right:calc(4.2% - 14px);}}
+
+/* Keep the central stone/scroll proportions intact on narrow screens. */
+.portal-crest{position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:64px;height:32px;overflow:visible;}
+.portal-crest path{fill:none;stroke:#c3a36b;stroke-width:.9;stroke-linecap:round;opacity:.72;}
+.portal-crest .portal-keystone{fill:rgba(150,111,54,.15);}
+@media(max-width:759px){.portal-crest{top:-2px;width:52px;height:28px;}}

@@ -1,0 +1,1 @@
+(()=>{const layer=document.querySelector('.anchored-gears');if(!layer)return;const reduce=matchMedia('(prefers-reduced-motion:reduce)');function sync(){layer.dataset.running=String(!document.hidden&&!reduce.matches);}document.addEventListener('visibilitychange',sync);reduce.addEventListener('change',sync);sync();})();

@@ -1,0 +1,4 @@
+/* Desktop dock spans eighty percent, centred with equal destinations. */
+@media(min-width:760px){
+  #fixedCta.antique-dock{left:10%;right:10%;width:80%;max-width:none;margin:0;bottom:24px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+}

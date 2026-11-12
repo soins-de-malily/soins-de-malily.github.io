@@ -1,0 +1,45 @@
+/* Keep all moving reflection inside the coin; remove its left-hand star ray. */
+.hero-medallion .sparkle-one{display:none!important;}
+.hero-medallion .medallion-reflection{inset:3%;clip-path:ellipse(49% 49% at 50% 50%);isolation:isolate;contain:paint;-webkit-mask-image:radial-gradient(ellipse closest-side,#000 80%,transparent 100%);mask-image:radial-gradient(ellipse closest-side,#000 80%,transparent 100%);}
+/* Portrait mirrors for the ten flowing hair images and two staff photographs. */
+#gloss-gallery .gloss-window{--gloss-gap:22px;padding:20px 6px 12px;}
+#gloss-gallery .gloss-photo{position:relative;width:calc(var(--gloss-height)*.75);height:var(--gloss-height);overflow:visible;border:0;border-radius:50%;isolation:isolate;}
+#gloss-gallery .gloss-photo img,#staff .face img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;}
+#gloss-gallery .gloss-photo::before,#staff .face::before{content:"";position:absolute;inset:-3px;border:1px solid #ad8b52;border-radius:50%;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.35);}
+#gloss-gallery .gloss-photo::after,#staff .face::after{content:"";position:absolute;inset:3px;border:1px solid rgba(233,207,146,.52);border-radius:50%;pointer-events:none;}
+#gloss-gallery .mirror-flourish,#staff .mirror-flourish{position:absolute;z-index:2;top:-17px;left:50%;transform:translateX(-50%);width:55px;height:23px;overflow:visible;pointer-events:none;filter:drop-shadow(0 1px 2px #09080b);}
+#gloss-gallery .mirror-flourish path,#staff .mirror-flourish path,.menu-flourish path{fill:none;stroke:#cfb17a;stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;}
+#staff .staff-list{padding-top:18px;}
+#staff .face{position:relative;overflow:visible;border:0;border-radius:50%;isolation:isolate;}
+/* Five antique picture frames: image dimensions and full room views are retained. */
+#salon-gallery .gloss-window{--gloss-gap:1cm;padding:12px 7px 16px;}
+#salon-gallery .gloss-photo{--frame-light:#c3ab76;--frame-dark:#57452b;--frame-mid:#9a7d4e;box-sizing:content-box;width:calc(var(--gloss-height)*var(--ratio));height:var(--gloss-height);padding:6px;border:1px solid var(--frame-light);overflow:visible;background:linear-gradient(130deg,var(--frame-light),var(--frame-dark) 17%,var(--frame-mid) 42%,var(--frame-dark) 78%,var(--frame-light));box-shadow:inset 0 0 0 1px var(--frame-dark),inset 0 0 0 3px color-mix(in srgb,var(--frame-light),transparent 45%),0 4px 10px rgba(0,0,0,.35);}
+#salon-gallery .gloss-photo:nth-child(5n+2){--frame-light:#a58b69;--frame-dark:#30251e;--frame-mid:#72543d;}
+#salon-gallery .gloss-photo:nth-child(5n+3){--frame-light:#bdc1b7;--frame-dark:#414946;--frame-mid:#848c82;}
+#salon-gallery .gloss-photo:nth-child(5n+4){--frame-light:#a7ad8b;--frame-dark:#2e3a32;--frame-mid:#69775c;}
+#salon-gallery .gloss-photo:nth-child(5n){--frame-light:#cba483;--frame-dark:#4b2e24;--frame-mid:#a27551;}
+#salon-gallery .gloss-photo img{border:1px solid rgba(22,17,12,.8);box-sizing:border-box;}
+/* Three transparent menu cards, with curved double lines and engraved corners. */
+#first .plan{border:1px solid rgba(190,155,91,.6);border-radius:30px 5px 30px 5px;background:transparent;box-shadow:none;overflow:visible;}
+#first .plan::before{display:block;content:"";position:absolute;inset:6px;margin:0;border:1px solid rgba(190,155,91,.23);border-radius:25px 3px 25px 3px;pointer-events:none;}
+.euro-corner{position:absolute;z-index:2;width:30px;height:30px;pointer-events:none;}
+.euro-corner path{fill:none;stroke:#bfa169;stroke-width:.8;stroke-linecap:round;opacity:.85;}
+.euro-corner-tl{top:3px;left:3px;}.euro-corner-tr{top:3px;right:3px;transform:scaleX(-1);}.euro-corner-bl{bottom:3px;left:3px;transform:scaleY(-1);}.euro-corner-br{bottom:3px;right:3px;transform:scale(-1);}
+.menu-flourish{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:58px;height:24px;pointer-events:none;overflow:visible;}
+#first .plans{row-gap:38px;}
+/* The illustrated map receives its own narrow antique-gold picture frame. */
+#access .map{position:relative;padding:8px;border:2px solid #b49a68;overflow:visible;background:linear-gradient(130deg,#c2aa79,#4f3d26 18%,#a98a52 44%,#4b3824 80%,#c2aa79);box-shadow:inset 0 0 0 1px #453421,inset 0 0 0 4px rgba(230,206,151,.45),0 7px 20px rgba(0,0,0,.3);}
+#access .map img{display:block;width:100%;height:auto;}
+#access .map .euro-corner{width:26px;height:26px;}
+/* All in-page booking actions use the fixed dock's European cartouche. */
+a.hpb-booking,.site-menu a.hpb-booking{border:0;border-radius:19px;overflow:visible;}
+a.hpb-booking::before,a.hpb-booking::after{display:none!important;}
+a.hpb-booking .dock-frame{position:absolute;inset:0;z-index:2;width:100%;height:100%;overflow:visible;pointer-events:none;}
+a.hpb-booking .dock-frame path{fill:none;stroke:#bfa169;stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;}
+a.hpb-booking .dock-frame .dock-inlay{stroke-width:.6;opacity:.48;}
+a.hpb-booking .dock-fleur{position:absolute;z-index:3;top:-14px;left:50%;transform:translateX(-50%);width:63px;height:27px;pointer-events:none;overflow:visible;}
+a.hpb-booking .dock-fleur path{fill:none;stroke:#c8aa70;stroke-width:.85;stroke-linecap:round;stroke-linejoin:round;}
+a.hpb-booking .dock-fleur .dock-crest-ground{fill:#221c15;stroke:none;}
+a.hpb-booking .dock-corner{position:absolute;width:26px;height:26px;z-index:3;pointer-events:none;}
+a.hpb-booking .dock-corner path{fill:none;stroke:#bfa169;stroke-width:.75;stroke-linecap:round;opacity:.78;}
+@media(max-width:759px){#gloss-gallery .mirror-flourish,#staff .mirror-flourish{width:47px;height:20px;top:-15px;}#first .plan{border-radius:26px 5px 26px 5px;}#first .plan::before{border-radius:21px 3px 21px 3px;}a.hpb-booking .dock-corner{width:22px;height:22px;}a.hpb-booking .dock-fleur{width:57px;height:24px;top:-12px;}}

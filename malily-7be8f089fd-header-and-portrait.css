@@ -1,0 +1,16 @@
+/* A restrained engraved-gold header, with a curved antique lower edge. */
+#hd,#hd.solid{background:linear-gradient(110deg,rgba(29,25,22,.96),rgba(18,17,23,.95) 58%,rgba(34,28,20,.96));border-bottom:0;box-shadow:none;}
+#hd .brand{color:#d2b77b;background:linear-gradient(115deg,#aa8b52 0%,#ecdbac 35%,#c4a66b 63%,#9e7c43 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.7));font-weight:500;}
+#hd .brand small{color:#ad905a;-webkit-text-fill-color:#ad905a;}
+#hd .menu-btn{border:1px solid rgba(174,141,81,.44);border-radius:50%;background:radial-gradient(ellipse at 50% 30%,rgba(179,143,77,.1),transparent 75%);box-shadow:inset 0 0 0 3px rgba(174,141,81,.06);}
+#hd .menu-btn span{background:linear-gradient(90deg,#94723c,#e1c993 50%,#a6864e);}
+#hd .menu-btn:focus-visible{outline:1px solid #d7bd83;outline-offset:4px;}
+.header-trim{position:absolute;left:0;bottom:-12px;width:100%;height:24px;pointer-events:none;color:#b79a60;}
+.header-curve{position:absolute;left:0;top:0;width:calc(50% - 30px);height:24px;overflow:visible;}
+.header-curve-right{left:auto;right:0;transform:scaleX(-1);}
+.header-trim path{fill:none;stroke:currentColor;stroke-width:.75;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;opacity:.6;}
+.header-filigree{position:absolute;left:50%;top:0;transform:translateX(-50%);width:60px;height:24px;overflow:visible;}
+.header-filigree path{stroke-width:.7;opacity:.8;}
+/* Keep the expanded portrait inside its existing oval, balancing head size with Shimizu. */
+#staff .staff-photo-window{position:absolute;inset:0;display:block;border-radius:50%;overflow:hidden;}
+#staff .staff-photo-window>img{position:absolute;left:-10%;top:-8%;right:auto;bottom:auto;width:120%;max-width:none;height:120%;object-fit:cover;border-radius:0;}

@@ -1,0 +1,31 @@
+/* 2026-11-12: unframed content on the existing antique backdrop. */
+.salon-journey{background:transparent;}
+.journey-card,#worries .worry-box,.pb-mat,.shot,.face,.map{
+  background:transparent;background-image:none;border:0;box-shadow:none;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#worries .worry-box li,#cases .case+.case,.case-details,#cases .case-details dd,
+#cases .ba figure,.stats,.cta-band,footer{border:0;box-shadow:none;}
+/* Preserve only each individual review/menu outline, without frosted fill. */
+.voice,.plan,.light .plan,.plan:hover,.light .plan:hover{
+  background:transparent;background-image:none;border:1px solid var(--line);
+  box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.plan::before{display:none;}
+.plan .tag{border:0;padding-inline:0;}
+.plan .perks{border:0;}
+/* Restore the adopted gold light falling down the vertical scroll cue. */
+.hero .hero-scroll-cue{display:block;position:relative;width:1px;height:130px;
+  margin:88px auto 0;animation:none!important;
+  background:linear-gradient(var(--brass),rgba(176,137,76,.15));}
+.hero .hero-scroll-cue::after{animation:ruleDrop 3.4s ease-in-out infinite;
+  animation-play-state:paused;}
+.hero.intro-visible .hero-scroll-cue::after{animation-play-state:running;}
+/* The booking button is visible from the very first frame, at every scroll position. */
+#fixedCta{position:fixed;z-index:120;transform:none!important;opacity:1!important;
+  visibility:visible!important;transition:none;}
+#fixedCta a.line{background:rgba(62,48,34,.96);border:0;box-shadow:none;
+  backdrop-filter:none;-webkit-backdrop-filter:none;}
+#fixedCta a.line:hover{background:rgba(83,63,40,.98);box-shadow:none;}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom));}
+@media(prefers-reduced-motion:reduce){.hero .hero-scroll-cue::after{animation:none;opacity:0;}}

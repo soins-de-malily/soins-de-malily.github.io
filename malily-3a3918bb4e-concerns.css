@@ -1,0 +1,2 @@
+/* Center the whole checklist while retaining its left-aligned text and responsive columns. */
+#worries .worry-box ul{width:max-content;max-width:100%;margin-inline:auto;}

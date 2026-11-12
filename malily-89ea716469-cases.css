@@ -1,0 +1,14 @@
+/* Each complete Before/After story is always visible inside one gold outline. */
+#cases .changes-card{padding-inline:0;}
+#cases .changes-card>.sec-head{padding-inline:22px;}
+#cases .cases{gap:24px;align-items:stretch;}
+#cases .case,#cases .case+.case{padding:28px 22px 30px;border:1px solid rgba(176,137,76,.44);background:transparent;box-shadow:none;}
+#cases .case h3{font-size:.98rem;line-height:1.85;letter-spacing:.025em;margin-bottom:20px;}
+#cases .case-details{margin-top:26px;padding:0;border:0;background:none;}
+#cases .case-details-heading{font-family:var(--jp);font-size:.84rem;font-weight:500;letter-spacing:.055em;line-height:1.9;color:#d3bf96;margin:0 0 19px;text-align:left;}
+#cases .case-details dl{margin:0;padding:0;border:0;}
+#cases .case-details dt{margin:20px 0 5px;padding:0;font-size:.76rem;line-height:1.85;font-weight:500;letter-spacing:.04em;color:#cbb58a;border:0;}
+#cases .case-details dt:first-child{margin-top:0;}
+#cases .case-details dd{margin:0;padding:0;font-size:.83rem;line-height:1.95;letter-spacing:.025em;border:0;}
+#cases .case-details .memo{margin:23px 0 0;padding:0;font-size:.83rem;line-height:2.05;letter-spacing:.025em;border:0;}
+@media(max-width:759px){#cases .cases{gap:26px;}#cases .case,#cases .case+.case{padding:25px 18px 28px;}#cases .case h3{font-size:.96rem;min-height:0;margin-bottom:20px;}#cases .case-details dd,#cases .case-details .memo{font-size:.85rem;}#cases .case-details{margin-top:24px;}}

@@ -1,0 +1,38 @@
+/* The existing coin logo, five percent smaller, with an occasional reflection. */
+.hero-medallion{display:block;position:relative;width:clamp(83.6px,16.15vw,123.5px);margin:0 auto 1.6rem;line-height:0;filter:drop-shadow(0 6px 22px rgba(0,0,0,.48));}
+.hero .hero-medallion>.crest{display:block;width:100%;height:auto;margin:0;animation:none;filter:none;}
+.medallion-reflection{position:absolute;inset:2.5%;border-radius:50%;overflow:hidden;pointer-events:none;}
+.medallion-reflection::after{content:"";position:absolute;inset:-20% -65%;background:linear-gradient(110deg,transparent 36%,rgba(255,235,174,.04) 42%,rgba(255,249,220,.34) 49%,rgba(255,235,174,.08) 54%,transparent 61%);mix-blend-mode:screen;transform:translateX(-70%);animation:medallion-reflection 12.8s ease-in-out infinite;}
+.medallion-sparkle{position:absolute;width:8px;height:8px;opacity:0;background:#fff2c4;clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%);filter:drop-shadow(0 0 3px #e1b25d);pointer-events:none;animation:medallion-glint 12.8s ease-in-out infinite;}
+.sparkle-one{left:15%;top:20%;}.sparkle-two{right:13%;bottom:22%;width:6px;height:6px;animation-delay:1.25s;}
+.hero-medallion *::after,.hero-medallion .medallion-sparkle{animation-play-state:paused;}
+.hero.intro-visible .hero-medallion *::after,.hero.intro-visible .hero-medallion .medallion-sparkle{animation-play-state:running;}
+@keyframes medallion-reflection{0%,9%{transform:translateX(-70%);opacity:0;}12%{opacity:1;}25%{transform:translateX(70%);opacity:.75;}28%,100%{transform:translateX(70%);opacity:0;}}
+@keyframes medallion-glint{0%,15%,24%,100%{opacity:0;transform:scale(.4) rotate(0deg);}19%{opacity:.85;transform:scale(1) rotate(15deg);}}
+/* Six individual portrait mirrors with a fine brass bezel and fleur-de-lis. */
+#cases .ba{gap:14px;padding:16px 4px 28px;}
+#cases .ba figure{border:0;overflow:visible;margin:0;aspect-ratio:3/4;border-radius:50%;isolation:isolate;}
+#cases .ba figure>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;border-radius:50%;}
+#cases .ba figure::before{content:"";position:absolute;inset:-3px;border:1px solid #ad8b52;border-radius:50%;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.35);}
+#cases .ba figure::after{content:"";position:absolute;inset:3px;border:1px solid rgba(233,207,146,.52);border-radius:50%;pointer-events:none;}
+#cases .mirror-flourish{position:absolute;z-index:2;top:-17px;left:50%;transform:translateX(-50%);width:55px;height:23px;overflow:visible;pointer-events:none;filter:drop-shadow(0 1px 2px #09080b);}
+#cases .mirror-flourish path{fill:none;stroke:#cfb17a;stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;}
+#cases .ba-label{left:50%;bottom:-29px;transform:translateX(-50%);background:transparent;padding:0 4px;font-size:1rem;line-height:1.45;white-space:nowrap;letter-spacing:.045em;color:#e5d1a6;}
+/* A curved, engraved cartouche instead of a plain rectangular plaque. */
+#fixedCta.antique-dock{border:0;border-radius:19px;background:radial-gradient(ellipse at 50% 0,rgba(177,138,73,.12),transparent 75%),linear-gradient(115deg,#292219,#171411 52%,#292219);box-shadow:0 6px 24px rgba(0,0,0,.4);overflow:visible;}
+#fixedCta.antique-dock::before,#fixedCta.antique-dock::after{display:none;}
+#fixedCta .dock-frame{position:absolute;inset:0;z-index:2;width:100%;height:100%;overflow:visible;pointer-events:none;}
+#fixedCta .dock-frame path{fill:none;stroke:#bfa169;stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;}
+#fixedCta .dock-frame .dock-inlay{stroke-width:.6;opacity:.48;}
+#fixedCta .dock-fleur{position:absolute;z-index:3;top:-14px;left:50%;transform:translateX(-50%);width:63px;height:27px;pointer-events:none;overflow:visible;}
+#fixedCta .dock-fleur path{fill:none;stroke:#c8aa70;stroke-width:.85;stroke-linecap:round;stroke-linejoin:round;}
+#fixedCta .dock-fleur .dock-crest-ground{fill:#221c15;stroke:none;}
+#fixedCta .dock-corner{position:absolute;width:26px;height:26px;z-index:3;pointer-events:none;}
+#fixedCta .dock-corner path{fill:none;stroke:#bfa169;stroke-width:.75;stroke-linecap:round;opacity:.78;}
+.dock-corner-tl{top:0;left:0;}.dock-corner-tr{top:0;right:0;transform:scaleX(-1);}.dock-corner-bl{bottom:0;left:0;transform:scaleY(-1);}.dock-corner-br{bottom:0;right:0;transform:scale(-1);}
+#fixedCta.antique-dock .antique-link{border-radius:18px;z-index:1;}
+#fixedCta.antique-dock .antique-link+.antique-link::before{top:20px;bottom:13px;}
+@media(max-width:759px){#cases .ba{gap:14px;padding-inline:3px;}#cases .mirror-flourish{width:47px;height:20px;top:-15px;}#fixedCta .dock-corner{width:22px;height:22px;}#fixedCta .dock-fleur{width:57px;height:24px;top:-12px;}}
+@media(prefers-reduced-motion:reduce){.medallion-reflection,.medallion-sparkle{display:none!important;}}
+
+.hero[data-london-paused="true"] .hero-medallion *::after,.hero[data-london-paused="true"] .hero-medallion .medallion-sparkle{animation-play-state:paused!important;}

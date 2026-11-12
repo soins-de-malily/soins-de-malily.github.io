@@ -1,0 +1,28 @@
+/* The same centered Mincho guide, now explicitly presented as three steps. */
+#suggestion .first-visit-heading{font-family:var(--jp);font-weight:400;text-align:center;line-height:1.8;margin:.9rem 0 2rem;letter-spacing:.09em;}
+#suggestion .first-visit-heading>span{display:block;}
+#suggestion .first-visit-heading>span:first-child{font-size:1.1rem;margin-bottom:7px;}
+#suggestion .first-visit-heading>span:last-child{font-size:clamp(1.2rem,4.7vw,1.5rem);letter-spacing:.07em;}
+#suggestion .first-visit-points li{margin-bottom:1.75rem;}
+#suggestion .first-visit-points li>.step-label{display:block;font-family:var(--disp);font-size:.72rem;font-weight:400;line-height:1.5;letter-spacing:.2em;color:#b69a63;margin:0 0 6px;}
+#suggestion .first-visit-points li>.step-description{margin-top:4px;}
+@media(max-width:759px){#suggestion .first-visit-heading{margin-bottom:1.8rem;}#suggestion .first-visit-heading>span:first-child{font-size:1.04rem;}#suggestion .first-visit-points li{margin-bottom:1.55rem;}#suggestion .first-visit-points li>.step-label{font-size:.68rem;}}
+/* Every HPB booking action matches the floating antique plaque and its exact two-line label. */
+a.hpb-booking,.site-menu a.hpb-booking{
+  position:relative;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+  width:min(100%,330px);min-width:0;min-height:74px;gap:4px;margin-inline:auto;padding:12px 20px;
+  border:1px solid #a88a53;border-radius:3px;text-align:center;text-decoration:none;white-space:nowrap;
+  letter-spacing:0;line-height:1.45;color:#f0e5ce;opacity:1;transform:none;
+  background:radial-gradient(ellipse at 50% 0,rgba(177,138,73,.13),transparent 78%),linear-gradient(115deg,#292219,#171411 52%,#292219);
+  box-shadow:inset 0 1px 0 rgba(244,220,171,.15),0 6px 24px rgba(0,0,0,.35);
+  transition:background .25s ease,color .25s ease;
+}
+a.hpb-booking::before{content:"";position:absolute;inset:4px;border:1px solid rgba(184,151,88,.30);border-radius:1px;pointer-events:none;}
+a.hpb-booking::after{content:"";position:absolute;top:6px;left:50%;width:5px;height:5px;background:#bb9c64;box-shadow:0 0 0 3px #211b15;transform:translateX(-50%) rotate(45deg);pointer-events:none;}
+a.hpb-booking .antique-title{font-family:var(--disp);font-size:clamp(14px,2.6vw,17px);font-weight:500;line-height:1.35;letter-spacing:.025em;color:#f0e5ce;text-shadow:0 1px 2px #080705;}
+a.hpb-booking .antique-caption{font-family:var(--jp);font-size:10.5px;font-weight:400;letter-spacing:.11em;line-height:1.6;color:#c6ad7c;}
+a.hpb-booking:hover,.site-menu a.hpb-booking:hover{color:#f0e5ce;letter-spacing:0;background:radial-gradient(ellipse at 50% 0,rgba(187,150,81,.23),transparent 78%),linear-gradient(115deg,#292219,#171411 52%,#292219);}
+a.hpb-booking:focus-visible{outline:2px solid #f0ddaf;outline-offset:4px;}
+.site-menu a.hpb-booking{margin-bottom:12px;}
+@media(min-width:760px){a.hpb-booking,.site-menu a.hpb-booking{min-height:78px;}a.hpb-booking .antique-caption{font-size:11px;letter-spacing:.15em;}}
+@media(prefers-reduced-motion:reduce){a.hpb-booking{transition:none;}}

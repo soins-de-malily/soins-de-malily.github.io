@@ -1,0 +1,5 @@
+
+#london-film{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 38%;opacity:0;transition:opacity .65s ease;filter:brightness(.91) saturate(.96) blur(.15px);}
+.film-ready #london-film{opacity:1;}.film-ready .london-shot{opacity:0!important;pointer-events:none;}.london-shot img{animation:none!important;}
+@media(max-width:759px){#london-film{object-position:50% 28%;}}
+@media(prefers-reduced-motion:reduce){#london-film{transition:none;}}

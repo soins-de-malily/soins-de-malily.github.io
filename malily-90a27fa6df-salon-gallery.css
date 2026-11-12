@@ -1,0 +1,8 @@
+/* Same real photographs and looping lane as the gloss gallery, without cropping or invented detail. */
+#salon-gallery{padding:38px 0;scroll-margin-top:100px;}
+#salon-gallery .salon-gallery-inner{width:min(90vw,1120px);margin-inline:auto;}
+#salon-gallery .salon-gloss{--gloss-height:clamp(210px,24vw,300px);position:relative;width:100%;max-width:none;left:auto;transform:none;margin:0;text-align:left;}
+#salon-gallery .gloss-window{--gloss-gap:10px;}
+#salon-gallery .gloss-photo{width:calc(var(--gloss-height) * var(--ratio));height:var(--gloss-height);margin:0;opacity:1!important;transition:none;}
+#salon-gallery .gloss-photo img{object-fit:contain;filter:brightness(1.035) contrast(1.025);image-rendering:auto;}
+@media(max-width:759px){#salon-gallery{padding:24px 0;}#salon-gallery .salon-gallery-inner{width:calc(100% - 30px);}#salon-gallery .salon-gloss{--gloss-height:210px;}#salon-gallery .gloss-window{--gloss-gap:7px;}}

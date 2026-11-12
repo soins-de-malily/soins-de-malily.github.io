@@ -1,0 +1,42 @@
+
+/* Design candidate: photographs with a temporary camera-movement preview. */
+.hero{isolation:isolate;background:#191b1d;}
+.hero>.gears,.hero>.vignette{display:none!important;}
+.hero-bg{z-index:-2;background:#232326!important;overflow:hidden;}
+.hero-bg::before{display:none!important;}
+.london-shot{position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity 1.1s ease;}
+.london-shot.is-current{opacity:1;}
+.london-shot picture{display:block;width:100%;height:100%;}
+.london-shot img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--focus-desktop) 38%;display:block;transform:scale(1.025);}
+.london-shot.is-current img{animation:londonDrift 7.2s linear both;}
+@keyframes londonDrift{from{transform:scale(1.025) translate3d(0,0,0);}to{transform:scale(1.09) translate3d(-.7%,.25%,0);}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(10,14,18,.16),rgba(14,14,18,.24) 18%,rgba(14,14,18,.53) 53%,rgba(14,14,18,.24) 76%,#14121a 100%),radial-gradient(ellipse at 50% 38%,rgba(13,13,17,.25),transparent 68%);}
+.hero-inner{z-index:1;}
+.hero .crest{animation:none!important;}
+.hero h1 .sheen{opacity:1!important;visibility:visible!important;animation:none!important;}
+.hero h1{filter:drop-shadow(0 3px 12px rgba(0,0,0,.7));}
+.hero .since{color:#d4b978;text-shadow:0 2px 8px #191b1d;}
+.hero .catch,.hero .sub{color:#f7f0e4;text-shadow:0 2px 14px #101316,0 1px 3px #101316;}
+.london-control{position:absolute;z-index:4;left:clamp(16px,3vw,50px);bottom:28px;display:flex;align-items:center;gap:12px;}
+.london-control button{color:#eee4d1;background:rgba(17,20,24,.35);border:1px solid rgba(231,212,173,.38);width:36px;height:36px;border-radius:50%;font:13px Georgia,serif;cursor:pointer;backdrop-filter:blur(8px);}
+.london-control button:focus-visible{outline:2px solid #ead7a6;outline-offset:4px;}
+.london-count{color:#d7c6a6;font:10px Georgia,serif;letter-spacing:.22em;text-shadow:0 1px 4px #111;}
+.london-paused .london-shot img{animation-play-state:paused!important;}
+@media(max-width:759px){.london-shot img{object-position:50% 30%;}.london-control{bottom:16px;}.london-control button{width:32px;height:32px;}}
+@media(prefers-reduced-motion:reduce){.london-shot{transition:none;}.london-shot img{animation:none!important;transform:none!important;}}
+
+/* Keep the Japanese copy legible against every film scene. */
+.hero .catch,.hero .sub{-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:#f7f0e4!important;color:#f7f0e4!important;animation:none!important;opacity:1!important;text-shadow:0 2px 8px rgba(8,11,15,.9),0 1px 2px #080b0f!important;}
+
+/* Frame each image behind the copy, independently of the hair gallery below. */
+.hero-bg{bottom:auto!important;height:var(--london-stage-height,100%);}
+.hero-bg::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 82%,rgba(20,18,26,.6) 100%);}
+.hero h1 .sheen,.hero .since{-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:#d4b978!important;color:#d4b978!important;animation:none!important;opacity:1!important;}
+.hero h1{animation:none!important;opacity:1!important;}
+@media(max-width:759px){.london-shot img{object-position:var(--focus-mobile) 28%;}}
+
+/* 2026-11-12: translucent charcoal, delicate softness and quiet film texture. */
+.london-shot img,.london-shot video{filter:brightness(.76) saturate(.76) contrast(1.04) blur(.6px);}
+.hero::after{background:linear-gradient(180deg,rgba(7,10,15,.27),rgba(10,12,18,.35) 25%,rgba(10,12,18,.55) 53%,rgba(10,12,18,.35) 78%,#14121a 100%),radial-gradient(ellipse at 50% 40%,rgba(13,13,17,.14),rgba(4,7,12,.30));}
+.hero-bg::after{background:linear-gradient(180deg,rgba(6,9,14,.06),transparent 70%,rgba(20,18,26,.72)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.055' filter='url(%23n)'/%3E%3C/svg%3E");}
+.hero h1{filter:drop-shadow(0 3px 14px rgba(0,0,0,.85));}

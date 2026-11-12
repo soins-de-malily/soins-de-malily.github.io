@@ -1,0 +1,19 @@
+/* Complete the remaining plain card borders in the same European vocabulary. */
+#cases .case,#cases .case+.case,#voice .review-card,#voice .review-more{position:relative;border-radius:27px 5px 27px 5px;border-color:rgba(190,155,91,.55);}
+#cases .case::before,#voice .review-card::before,#voice .review-more::before{content:"";position:absolute;inset:5px;border:1px solid rgba(190,155,91,.2);border-radius:22px 3px 22px 3px;pointer-events:none;}
+#cases .case>.euro-corner,#voice .review-card>.euro-corner,#voice .review-more>.euro-corner{width:24px;height:24px;}
+.enclosure-flourish{position:absolute;top:3px;left:50%;transform:translateX(-50%);width:39px;height:16px;pointer-events:none;}
+.enclosure-flourish path{fill:none;stroke:#c3a56f;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round;opacity:.75;}
+/* LINE and Instagram links remain usable, with light engraved edges. */
+a.btn-line,a.ig-link{position:relative;border-radius:19px 4px 19px 4px;border-color:rgba(190,155,91,.56);}
+a.btn-line::before,a.ig-link::before{content:"";position:absolute;inset:4px;border:1px solid rgba(190,155,91,.2);border-radius:14px 2px 14px 2px;pointer-events:none;}
+a.btn-line>.euro-corner,a.ig-link>.euro-corner{position:absolute;width:19px;height:19px;pointer-events:none;}
+a.btn-line>.euro-corner path,a.ig-link>.euro-corner path{stroke-width:.65;opacity:.7;}
+.price .off{border-radius:13px 3px 13px 3px;}
+/* A quiet footer seal, smaller than the first-view medallion. */
+footer .footer-medallion{display:block;width:clamp(64px,7vw,78px);height:auto;margin:0 auto 18px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.4));}
+@media(max-width:759px){#cases .case,#cases .case+.case,#voice .review-card,#voice .review-more{border-radius:24px 4px 24px 4px;}#cases .case::before,#voice .review-card::before,#voice .review-more::before{border-radius:19px 2px 19px 2px;}}
+
+#staff .face>img{position:absolute;inset:0;}
+
+#access .map{width:min(calc(84% + 20px),400px);}

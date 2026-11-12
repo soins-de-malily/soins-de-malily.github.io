@@ -1,0 +1,22 @@
+/* One stationary mechanical background, sharing the fixed photograph's coordinate space. */
+.sec-gears{display:none!important;}
+.anchored-gears{--cog-large:clamp(190px,22vw,300px);--cog-small:calc(var(--cog-large)*.54);--cog-right:clamp(180px,23vw,310px);--cog-right-small:calc(var(--cog-right)*.52);position:fixed;left:0;right:0;top:0;height:100vh;height:100svh;z-index:-1;overflow:hidden;pointer-events:none;isolation:isolate;}
+.fixed-cog{position:absolute;aspect-ratio:1;pointer-events:none;}
+.fixed-cog-a{width:var(--cog-large);left:calc(var(--cog-large)*-.35);top:calc(10svh + 10px);}
+.fixed-cog-b{width:var(--cog-small);left:calc(var(--cog-large)*.22);top:calc(10svh + 10px + var(--cog-large)*.8);}
+.fixed-cog-c{width:var(--cog-right);right:calc(var(--cog-right)*-.35);bottom:6svh;}
+.fixed-cog-d{width:var(--cog-right-small);right:calc(var(--cog-right)*.22);bottom:calc(6svh + var(--cog-right)*.8);}
+.cog-seat{position:absolute;inset:7%;border-radius:50%;background:radial-gradient(circle,#15120f 0 51%,rgba(12,10,13,.92) 63%,rgba(8,7,10,.35) 73%,transparent 80%);box-shadow:0 6px 18px rgba(0,0,0,.35);}
+.fixed-cog .cog-face{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:1;mix-blend-mode:normal;transform-origin:50% 50%;transform-box:view-box;filter:brightness(.32) contrast(1.1) saturate(.72) drop-shadow(1px 3px 3px rgba(0,0,0,.85));animation:anchoredCogTurn var(--cog-period) linear infinite;animation-direction:var(--cog-direction);animation-play-state:paused;}
+.anchored-gears[data-running="true"] .cog-face{animation-play-state:running;}
+.cog-bearing{position:absolute;inset:43%;border-radius:50%;background:radial-gradient(circle at 36% 28%,#69583b,#332b1f 43%,#15120f 63%,#69563b 71%,#201c16 78%);box-shadow:0 2px 5px rgba(0,0,0,.8),inset 0 1px 1px rgba(206,180,118,.16);}
+@keyframes anchoredCogTurn{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+/* The open menu already occupies the viewport; keep its axes equally stationary and opaque. */
+.menu-gears{position:fixed;inset:0;}
+.menu-gears .mg{opacity:1!important;transform-origin:50% 50%;transform-box:view-box;filter:brightness(.3) contrast(1.1) saturate(.7) drop-shadow(2px 4px 5px rgba(0,0,0,.8));animation-play-state:paused;}
+body.menu-open .menu-gears .mg{animation-play-state:running;}
+@media(prefers-reduced-motion:reduce){.fixed-cog .cog-face,.menu-gears .mg{animation:none!important;}}
+
+/* Dark, slotted axle caps instead of smooth bright domes. */
+.cog-bearing{inset:45%;background:radial-gradient(circle at 38% 32%,#4d4230 0%,#29231b 36%,#11100f 55%,#51452f 62%,#191612 73%,#30281c 84%,#171411 100%);box-shadow:0 2px 4px rgba(0,0,0,.85),inset 0 1px 1px rgba(166,141,91,.12);}
+.cog-bearing::after{content:"";position:absolute;left:25%;right:25%;top:48%;height:1px;background:#0b0b0c;box-shadow:0 1px 0 rgba(144,121,78,.16);transform:rotate(-22deg);}

@@ -1,0 +1,3 @@
+/* Keep the final proposal sentence together on its own centered line. */
+#suggestion .first-visit-note .proposal-sentence{display:inline-block;white-space:nowrap;}
+#silky-guidance{scroll-margin-top:100px;}

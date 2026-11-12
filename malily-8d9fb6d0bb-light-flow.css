@@ -1,0 +1,20 @@
+/* One quiet gold light: descend, illuminate the crest, open out along the arch. */
+.hero .hero-scroll-cue::after{display:none!important;}
+.hero-scroll-label{position:absolute;bottom:calc(100% + 16px);left:50%;transform:translateX(-50%);font-family:var(--en,serif);font-size:10px;font-weight:400;line-height:1;letter-spacing:.3em;padding-left:.3em;color:#d5bd8b;white-space:nowrap;}
+.portal-light-flow{position:absolute;left:0;z-index:3;overflow:visible;pointer-events:none;opacity:0;transition:opacity .5s;}
+.light-intro-ready .portal-light-flow{opacity:1;}
+.portal-light-flow path{fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.portal-light-flow .falling-light{stroke:#ffebbb;stroke-width:2;stroke-dasharray:8 1000;filter:drop-shadow(0 0 4px #f6d48b);animation:portal-light-fall 8.4s linear infinite;}
+.portal-light-flow .falling-trail{stroke:#dcb979;stroke-width:2;stroke-dasharray:95 1000;filter:blur(3px);animation:portal-light-fall 8.4s linear infinite;}
+.portal-light-flow .crown-halo{fill:#d5aa62;filter:blur(12px);animation:portal-crown-halo 8.4s ease-in-out infinite;}
+.portal-light-flow .crown-illumination{filter:drop-shadow(0 0 3px #e6bb73);animation:portal-crown-light 8.4s ease-in-out infinite;}
+.portal-light-flow .crown-illumination path{stroke:#ffe1a2;stroke-width:1;vector-effect:non-scaling-stroke;}
+.portal-light-flow .arch-light{stroke:#f4d79a;stroke-width:1.2;stroke-dasharray:180 1000;animation:portal-arch-light 8.4s cubic-bezier(.2,.55,.4,1) infinite;filter:drop-shadow(0 0 3px #c59b50);}
+.portal-light-flow .arch-aura{stroke:#d0a361;stroke-width:5;stroke-dasharray:220 1000;animation:portal-arch-light 8.4s cubic-bezier(.2,.55,.4,1) infinite;filter:blur(5px);}
+.portal-light-flow *{animation-play-state:paused!important;}
+.light-flow-running .portal-light-flow *{animation-play-state:running!important;}
+@keyframes portal-light-fall{0%,5%{stroke-dashoffset:10;opacity:0;}9%{opacity:.9;}37%{stroke-dashoffset:-1000;opacity:.9;}43%,100%{stroke-dashoffset:-1010;opacity:0;}}
+@keyframes portal-crown-light{0%,30%{opacity:0;}40%{opacity:.85;}51%{opacity:.4;}63%,100%{opacity:0;}}
+@keyframes portal-crown-halo{0%,30%{opacity:0;}41%{opacity:.16;}58%,100%{opacity:0;}}
+@keyframes portal-arch-light{0%,40%{stroke-dashoffset:220;opacity:0;}47%{opacity:.8;}78%{opacity:.6;}88%,100%{stroke-dashoffset:-1000;opacity:0;}}
+@media(prefers-reduced-motion:reduce){.portal-light-flow{display:none!important;}}

@@ -1,0 +1,28 @@
+/* A two-part antique brass plaque, fixed independently of page scroll. */
+#fixedCta.antique-dock{
+  position:fixed;z-index:120;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;
+  width:auto;max-width:520px;margin-inline:auto;padding:0;flex-direction:row;
+  border:1px solid #a88a53;border-radius:3px;
+  background:radial-gradient(ellipse at 50% 0,rgba(177,138,73,.13),transparent 78%),linear-gradient(115deg,#292219,#171411 52%,#292219);
+  box-shadow:inset 0 1px 0 rgba(244,220,171,.15),0 6px 24px rgba(0,0,0,.35);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+  transform:none!important;opacity:1!important;visibility:visible!important;
+}
+#fixedCta.antique-dock::before{content:"";position:absolute;inset:4px;border:1px solid rgba(184,151,88,.30);border-radius:1px;pointer-events:none;z-index:2;}
+#fixedCta.antique-dock::after{content:"";position:absolute;top:6px;left:50%;width:5px;height:5px;background:#bb9c64;box-shadow:0 0 0 3px #211b15;transform:translateX(-50%) rotate(45deg);pointer-events:none;z-index:3;}
+#fixedCta.antique-dock .antique-link{
+  position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;min-width:0;min-height:74px;margin:0;padding:11px 10px 12px;
+  border:0;border-radius:0;background:transparent;color:#f0e5ce;text-decoration:none;
+  opacity:1;white-space:nowrap;text-align:center;letter-spacing:0;line-height:1.45;
+  transition:background .25s ease,color .25s ease;
+}
+#fixedCta.antique-dock .antique-link+.antique-link::before{content:"";position:absolute;left:0;top:13px;bottom:11px;width:1px;background:linear-gradient(transparent,rgba(190,155,87,.75) 20% 80%,transparent);}
+#fixedCta.antique-dock .antique-title{font-family:var(--disp);font-size:clamp(14px,2.6vw,17px);font-weight:500;line-height:1.35;letter-spacing:.025em;color:#f0e5ce;text-shadow:0 1px 2px #080705;}
+#fixedCta.antique-dock .antique-caption{font-family:var(--jp);font-size:10.5px;font-weight:400;letter-spacing:.11em;line-height:1.6;color:#c6ad7c;}
+#fixedCta.antique-dock .antique-link:hover{background:rgba(187,150,81,.10);}
+#fixedCta.antique-dock .antique-link:focus-visible{outline:2px solid #f0ddaf;outline-offset:3px;z-index:4;}
+body{padding-bottom:calc(102px + env(safe-area-inset-bottom));}
+@media(min-width:760px){#fixedCta.antique-dock{left:auto;right:24px;bottom:24px;width:480px;max-width:calc(100vw - 48px);margin:0;}#fixedCta.antique-dock .antique-link{min-height:78px;padding-inline:18px;}#fixedCta.antique-dock .antique-caption{font-size:11px;letter-spacing:.15em;}}
+@media(prefers-reduced-motion:reduce){#fixedCta.antique-dock .antique-link{transition:none;}}
