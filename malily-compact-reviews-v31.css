@@ -1,0 +1,24 @@
+/* Equal, compact outer frames; only the review prose scrolls vertically. */
+#voice .review-rail{align-items:stretch;height:auto!important;transition:none;}
+#voice .review-card,#voice .review-more{height:var(--review-card-height,auto);min-height:0;box-sizing:border-box;}
+#voice .review-card{display:flex;flex-direction:column;padding:24px 27px;}
+#voice .review-card>.review-person{flex:none;margin-bottom:12px;}
+#voice .review-card>.review-overall{flex:none;margin-bottom:12px;}
+#voice .review-card>.review-ratings{flex:none;margin-bottom:14px;}
+#voice .review-copy{flex:1 1 0;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#9c7a43 transparent;scrollbar-gutter:stable;overscroll-behavior-y:contain;touch-action:pan-x pan-y pinch-zoom;padding-right:8px;}
+#voice .review-copy::-webkit-scrollbar{width:4px;}
+#voice .review-copy::-webkit-scrollbar-thumb{background:#9c7a43;border-radius:8px;}
+#voice .review-copy:focus-visible{outline:1px solid #baa16c;outline-offset:3px;border-radius:3px;}
+#voice .review-scroll-hint{flex:none;height:15px;margin:7px 0 0;font-family:var(--jp);font-size:10px;line-height:15px;letter-spacing:.06em;color:#b6a278;text-align:center;visibility:hidden;}
+#voice .review-card[data-scrollable="true"]>.review-scroll-hint{visibility:visible;}
+#voice .review-card>.review-menu{flex:none;min-height:var(--review-menu-height,44px);margin:14px 0 0;}
+#voice .review-more{gap:18px;}
+#voice .review-more>*:not(svg){max-width:100%;}
+/* Measure the former natural layout without constraining or displaying duplicate text. */
+#voice .review-measure{position:absolute!important;left:-10000px!important;top:0!important;visibility:hidden!important;pointer-events:none!important;display:block!important;height:auto!important;min-height:0!important;padding:28px 27px!important;}
+#voice .review-measure>.review-person{margin-bottom:17px!important;}
+#voice .review-measure>.review-overall{margin-bottom:15px!important;}
+#voice .review-measure>.review-ratings{margin-bottom:23px!important;}
+#voice .review-measure>.review-copy{height:auto!important;overflow:visible!important;scrollbar-gutter:auto!important;padding:0!important;}
+#voice .review-measure>.review-menu{min-height:0!important;margin:23px 0 0!important;}
+@media(max-width:759px){#voice .review-card{padding:22px 20px;}#voice .review-measure{padding:23px 20px!important;}#voice .review-scroll-hint{font-size:9px;letter-spacing:.025em;}}
