@@ -1,0 +1,7 @@
+/* Align the first decoded frame and its still fallback exactly. */
+.hero .london-start{position:absolute;inset:0;display:block;pointer-events:none;}
+.hero .london-start img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 38%;transform:none;filter:brightness(.91) saturate(.96) blur(.15px);}
+.hero #london-film{transition:none;}
+@media(max-width:759px){.hero .london-start img{object-position:68% 28%;}}
+/* Move the complete mobile text block without changing its width or the map. */
+@media(max-width:759px){#access .info{position:relative;left:-1cm;}}
